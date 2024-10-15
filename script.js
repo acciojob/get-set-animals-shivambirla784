@@ -1,9 +1,30 @@
-//complete this code
-class Animal {}
+class Animal {
+  constructor(species) {
+    this._species = species; // Use a private variable with an underscore
+  }
 
-class Dog extends Animal {}
+  // Getter for species
+  get species() {
+    return this._species;
+  }
 
-class Cat extends Animal {}
+  // Method to log a sound the animal makes
+  makeSound() {
+    console.log(`The ${this.species} makes a sound`);
+  }
+}
+
+class Cat extends Animal {
+  purr() {
+    console.log("purr");
+  }
+}
+
+class Dog extends Animal {
+  bark() {
+    console.log("woof");
+  }
+}
 
 // Do not change the code below this line
 window.Animal = Animal;
